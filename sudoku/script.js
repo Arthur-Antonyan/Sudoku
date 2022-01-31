@@ -39,3 +39,5 @@ btn.addEventListener('click', () => {
   }
 });
 btn.addEventListener('click', addRandom);
+
+console.log(1);
