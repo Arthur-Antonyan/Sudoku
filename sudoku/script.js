@@ -7,7 +7,7 @@ for (let i = 0; i < div.length; i++) {
 }
 let wrapper = document.querySelector('.board');
 wrapper.oninput = (event) => {
-  let regex = /^\d$/;
+  const regex = /^\d$/;
   if (!event.target.innerHTML.match(regex)) {
     event.target.style.backgroundColor = 'red';
     check.setAttribute('disabled', 'disabled');
