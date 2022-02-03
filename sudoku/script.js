@@ -63,7 +63,7 @@ function checkColumns(matrix) {
       checkColumnsArr.push(matrix[j][i]);
       z = matrix[j].length - 1;
     }
-    let x = new Set(checkColumnsArr);
+    const x = new Set(checkColumnsArr);
     let y = temp;
     for (let props of x) {
       if (props === y || x.size != z) {
