@@ -53,7 +53,7 @@ btn.addEventListener('click', () => {
 });
 btn.addEventListener('click', addRandom);
 
-let checkColumnsArr = [];
+const checkColumnsArr = [];
 function checkColumns(matrix) {
   let temp, z;
   for (let i = 0; i < matrix.length; i++) {
