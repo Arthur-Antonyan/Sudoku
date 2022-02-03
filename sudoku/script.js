@@ -74,7 +74,7 @@ function checkColumns(matrix) {
   }
 }
 
-let checkRowsArr = [];
+const checkRowsArr = [];
 function checkRows(matrix) {
   let temp, z;
   for (let i = 0; i < matrix.length; i++) {
