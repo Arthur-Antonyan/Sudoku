@@ -69,7 +69,7 @@ function checkColumns(matrix) {
       if (props === y || x.size != z) {
         answers.push(false);
         break;
-      } else continue;
+      }
     }
   }
 }
