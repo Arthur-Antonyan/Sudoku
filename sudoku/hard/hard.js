@@ -1,8 +1,11 @@
+import { start, pause, reset } from '../general/stopwatch.js';
 import { addRandom } from './addRandomHard.js';
 import { answers, checkColumnsArr, checkGrid, checkRowsArr } from './checkDublicatesBefore.js';
-import { checkGridFilled, answersFilled } from './checkFunctionsFilled.js';
+import { answersFilled, checkGridFilled } from './checkFunctionsFilled.js';
+// import { start, pause } from './stopwatch.js';
+
 let checkBtn = document.querySelector('.checkHard');
-let randomBtn = document.querySelector('.addRandom');
+export let randomBtn = document.querySelector('.addRandom');
 
 ///creating 9 divs
 let hard = document.querySelector('.hard');
@@ -45,7 +48,7 @@ checkBtn.addEventListener('click', () => {
     }
   }
 });
-////////////////////////////////////////////////
+////////calling random
 checkBtn.addEventListener('click', random);
 
 export let matrix = [];
@@ -80,7 +83,7 @@ checkBtn.addEventListener('click', () => {
   split(arr, 3);
 });
 
-////creating new matrix from random elements
+////creating new matrix from random elements of game desk
 let newmatrix = [];
 let newarr = [];
 function createMatrix() {
@@ -136,5 +139,7 @@ randomBtn.addEventListener('click', () => {
 });
 randomBtn.addEventListener('click', () => {
   checkGridFilled(createMatrix());
-  console.log(answersFilled);
 });
+checkBtn.addEventListener('click', reset);
+checkBtn.addEventListener('click', start);
+randomBtn.addEventListener('click', pause);

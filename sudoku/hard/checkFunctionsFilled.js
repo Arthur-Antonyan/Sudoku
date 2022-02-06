@@ -21,7 +21,7 @@ export function checkGridFilled(matrix) {
     const y = new Set(checkGridArrFilled);
     const g = new Set(checkColumnsArrFilled);
 
-    if (x.size != z || g.size != z2) {
+    if (g.size != z2) {
       answersFilled.push(false);
     }
   }

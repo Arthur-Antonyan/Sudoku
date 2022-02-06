@@ -1,24 +1,23 @@
 import { addRandom } from './addRandom.js';
 import { checkGrid, checkRowsArr, checkGridArr, checkColumnsArr } from './checkFunctionsRandom.js';
-import { start, pause } from '../general/stopwatch.js';
+import { start, pause, reset } from '../general/stopwatch.js';
 export let answers = [];
 export let check = document.querySelector('.check');
 let div = document.querySelectorAll('.board>div');
-let startGamebtn = document.querySelector('.change');
+export let startGamebtn = document.querySelector('.change');
 let matrix = [];
 let arr = [];
-startGamebtn.addEventListener('click', start);
-check.addEventListener('click', pause);
 
 for (let i = 0; i < div.length; i++) {
   div[i].classList.add(i + 1);
 }
-
+////emptying
 startGamebtn.addEventListener('click', () => {
   for (let i = 0; i < div.length; i++) {
     div[i].innerHTML = '';
   }
 });
+
 startGamebtn.addEventListener('click', addRandom);
 
 function split(arr, len) {
@@ -49,3 +48,6 @@ startGamebtn.addEventListener('click', () => {
   checkGridArr.length = 0;
   answers.length = 0;
 });
+startGamebtn.addEventListener('click', reset);
+startGamebtn.addEventListener('click', start);
+check.addEventListener('click', pause);

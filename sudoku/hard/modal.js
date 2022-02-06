@@ -1,26 +1,28 @@
-import { answers, check } from '../easy/script.js';
+import { reset } from '../general/stopwatch.js';
+import { answersFilled } from './checkFunctionsFilled.js';
+import { randomBtn } from './hard.js';
 
-import { reset } from './stopwatch.js';
-let modal = document.querySelector('.modal');
-let span = document.querySelector('.modal>span');
+let modal = document.querySelector('.modal1');
+let span = document.querySelector('.modal1>span');
 let scoreNames = document.querySelectorAll('.name>li');
 let scoreSecs = document.querySelectorAll('.score>li');
 let res = [];
 let name = document.querySelector('#name');
-let modalOk = document.querySelector('.modalBtn');
+let modalOk = document.querySelector('.modalBtn1');
 const reg = /\d\d\:\d\d\:\d\d/;
 
-check.addEventListener('click', () => {
+randomBtn.addEventListener('click', () => {
   modal.style.visibility = 'visible';
 
-  if (!answers.includes(false)) {
+  if (!answersFilled.includes(false)) {
     span.innerHTML = 'win  Your score is ' + document.getElementById('display').innerHTML;
   } else span.innerHTML = 'fail your score is ' + document.getElementById('display').innerHTML;
 });
 
 modalOk.addEventListener('click', reset);
+
 modalOk.addEventListener('click', () => {
-  if (!answers.includes(false)) {
+  if (!answersFilled.includes(false)) {
     let arr4 = span.innerHTML
       .match(reg)
       .toString()

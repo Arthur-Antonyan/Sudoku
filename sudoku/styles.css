@@ -27,6 +27,17 @@
   z-index: 1;
   visibility: hidden;
 }
+.modal1 {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(131, 52, 52);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  visibility: hidden;
+}
 .stopwatch {
   position: relative;
   float: right;
