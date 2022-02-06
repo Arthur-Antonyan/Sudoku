@@ -18,7 +18,7 @@
 }
 .modal {
   width: 200px;
-  height: 300px;
+  height: 50px;
   background-color: rgb(131, 52, 52);
   display: flex;
   flex-direction: column-reverse;
@@ -26,4 +26,55 @@
   margin-right: auto;
   z-index: 1;
   visibility: hidden;
+}
+.stopwatch {
+  position: relative;
+  float: right;
+}
+
+.desk {
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  float: right;
+  clear: right;
+}
+
+.results li {
+  list-style-type: none;
+}
+.score {
+  list-style-type: none;
+}
+
+.hard {
+  display: grid;
+  grid-template-columns: 95px 95px 95px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.grid {
+  border: 1px solid black;
+  width: 95px;
+  height: 95px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 33px 33px 33px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.grid > div {
+  border: 1px solid rgb(138, 134, 134);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 0;
 }
