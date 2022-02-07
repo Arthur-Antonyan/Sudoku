@@ -70,9 +70,8 @@ checkBtn.addEventListener('click', () => {
 ////filing matrix  with gird numbers from array
 
 function split(arr, len) {
-  let i, n;
-
-  (i = 0), (n = arr.length);
+  let i = 0;
+  let n = arr.length;
   while (i < n) {
     matrix.push(arr.slice(i, (i += len)));
   }
