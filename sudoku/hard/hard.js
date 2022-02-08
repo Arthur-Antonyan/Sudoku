@@ -73,7 +73,8 @@ function split(arr, len) {
   let i = 0;
   let n = arr.length;
   while (i < n) {
-    matrix.push(arr.slice(i, (i += len)));
+    matrix.push(arr.slice(i, i + len));
+    i += len;
   }
   return matrix;
 }
