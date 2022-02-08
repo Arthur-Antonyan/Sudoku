@@ -85,7 +85,7 @@ function changeTable() {
 modalOk.addEventListener('click', changeTable);
 
 function renderStorageState() {
-  if (localStorage.length != 0) {
+  if (localStorage.length) {
     for (let i = 0; i < storageArrEasy.length; i++) {
       scoreNames[i].innerHTML = storageArrEasy[i][0];
       scoreSecs[i].innerHTML = storageArrEasy[i][1].match(timeFormatReg).toString();
