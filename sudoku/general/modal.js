@@ -75,7 +75,7 @@ function changeTable() {
       scoreSecs[i].innerHTML = JSON.parse(localStorage.getItem('value'))[i][1].match(timeFormatReg).toString();
     }
   }
-  if (checkbox.checked == false) {
+  else {
     for (let i = 0; i < JSON.parse(localStorage.getItem('valueHard')).length; i++) {
       scoreNamesHard[i].innerHTML = JSON.parse(localStorage.getItem('valueHard'))[i][0];
       scoreSecsHard[i].innerHTML = JSON.parse(localStorage.getItem('valueHard'))[i][1].match(timeFormatReg).toString();
