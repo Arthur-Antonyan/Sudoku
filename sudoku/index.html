@@ -2,18 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script defer src="index.js" type="text/javascript"></script>
     <script type="module" src="easy/script.js" type="text/javascript"></script>
-    <script type="module" src="easy/addRandom.js" type="text/javascript"></script>
+    <script type="module" src="general/addRandom.js" type="text/javascript"></script>
     <script type="module" src="easy/checkFunctionsRandom.js" type="text/javascript"></script>
     <script type="module" src="general/stopwatch.js" type="text/javascript"></script>
     <script type="module" src="general/onInputCheck.js" type="text/javascript"></script>
     <script type="module" src="general/modal.js" type="text/javascript"></script>
     <script type="module" src="hard/checkFunctionsFilled.js" type="text/javascript"></script>
     <script type="module" src="hard/hard.js" type="text/javascript"></script>
-    <script type="module" src="hard/addRandomHard.js" type="text/javascript"></script>
     <script type="module" src="hard/checkDublicatesBefore.js" type="text/javascript"></script>
-    <script type="module" src="hard/modal.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
@@ -26,36 +24,29 @@
     <div class="desk">
       <ol class="name">
         Name
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ol>
       <ol class="score">
         Score
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ol>
     </div>
-
-    <div class="board">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="deskHard">
+      <ol class="nameHard">
+        Name
+      </ol>
+      <ol class="scoreHard">
+        Score
+      </ol>
     </div>
-    <button class="change">Start game</button>
-    <div class="hard"></div>
-    <button class="check">Check</button>
+    <div class="board">
+      <button class="change">Start</button>
+      <button class="check">Check</button>
+    </div>
+
+    <div class="hard">
+      <button class="checkHard">Start</button>
+      <button class="addRandom">Check</button>
+    </div>
+
     <div class="modal">
       <button class="modalBtn">OK</button>
       <span></span>
@@ -64,7 +55,9 @@
       <button class="modalBtn1">OK</button>
       <span></span>
     </div>
-    <button class="addRandom">add numbers</button>
-    <button class="checkHard">Hard</button>
+
+    <div class="center">
+      <input type="checkbox" name="" class="easyHard" checked />
+    </div>
   </body>
 </html>

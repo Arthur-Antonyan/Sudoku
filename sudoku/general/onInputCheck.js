@@ -1,25 +1,20 @@
 let wrapper = document.querySelector('.board');
 let check = document.querySelector('.check');
-wrapper.oninput = (event) => {
-  const regex = /^\d$/;
-
-  if (!event.target.innerHTML.match(regex)) {
-    event.target.style.backgroundColor = 'red';
-    check.setAttribute('disabled', 'disabled');
-  } else {
-    event.target.style.backgroundColor = 'white';
-    check.removeAttribute('disabled', 'disabled');
-  }
-};
 let hard = document.querySelector('.hard');
-hard.oninput = (event) => {
-  const regex = /^\d$/;
+let checkHard = document.querySelector('.addRandom');
+function checkNum(event) {
+  const onlyNumbers = /^[1-9]$/;
 
-  if (!event.target.innerHTML.match(regex)) {
+  if (!event.target.innerHTML.match(onlyNumbers) && event.target.innerHTML != '') {
     event.target.style.backgroundColor = 'red';
+    checkHard.setAttribute('disabled', 'disabled');
     check.setAttribute('disabled', 'disabled');
   } else {
     event.target.style.backgroundColor = 'white';
+    checkHard.removeAttribute('disabled', 'disabled');
     check.removeAttribute('disabled', 'disabled');
   }
-};
+}
+
+hard.addEventListener('input', checkNum);
+wrapper.addEventListener('input', checkNum);

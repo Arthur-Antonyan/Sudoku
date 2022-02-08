@@ -1,4 +1,5 @@
 import { answers } from './script.js';
+
 export const checkRowsArr = [];
 export const checkGridArr = [];
 export const checkColumnsArr = [];

@@ -2,6 +2,7 @@ export const checkRowsArr = [];
 export const checkColumnsArr = [];
 export let answers = [];
 export function checkGrid(matrix) {
+  answers.length = 0;
   let z;
   let z1;
   for (let i = 0; i < matrix.length; i++) {
