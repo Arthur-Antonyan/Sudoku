@@ -16,7 +16,7 @@ if (checkBox.checked == true) {
   scoresEasy.style.display = 'flex';
 }
 checkBox.addEventListener('click', () => {
-  if (checkBox.checked == true) {
+  if (checkBox.checked) {
     hard.style.display = 'none';
     scoresHard.style.display = 'none';
     board.style.display = 'grid';
